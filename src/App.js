@@ -1,4 +1,6 @@
 import React from 'react';
+import TeaGathering from './TeaGathering';
+import Clock from './Clock';
 import './App.css';
 
 function Recipe({ drinkers }){
@@ -10,27 +12,14 @@ function Recipe({ drinkers }){
     </ol>
   );
 }
-function Cup({ guest }){
-  return(
-    <h1 className='text-md font-normal text-blue-500'>Tea cup for guest #{guest}</h1>
-  );
-}
-
-// Why doesnt this work?
-function TeaSet(guests){
-  const guestItems = guests.map(guest => <Cup guest={guest} />);
-  return(
-    <div className='container'>
-      {guestItems}
-    </div>
-  );
-}
 
 export default function App() {
-  const guests = ['1','2','3'];
-  const guestItems = guests.map(guest => <Cup guest={guest} />);
+  const time = new Date();
   return (
     <section className='mx-auto grid justify-center'>
+      <div className='container p-3'>
+        <Clock time = {time}/>
+      </div>
       <div className='container p-4'>
         <h1 className='text-3xl font-bold'>Spiced Chai Recipe</h1>
       </div>
@@ -44,10 +33,9 @@ export default function App() {
       </div>
       <div className='container p-3'>
         <h2 className='text-xl font-semibold'>Product List for Tea Set:</h2>
-        <div className='container'>
-          {guestItems}
-        </div>
+        <TeaGathering />
       </div>
+      
     </section>
   );
 }
