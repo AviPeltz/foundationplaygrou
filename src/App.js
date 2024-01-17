@@ -27,7 +27,7 @@ function TeaSet(guests){
 }
 
 export default function App() {
-  var guests = ['1','2','3'];
+  const guests = ['1','2','3'];
   const guestItems = guests.map(guest => <Cup guest={guest} />);
   return (
     <section className='mx-auto grid justify-center'>
