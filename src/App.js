@@ -9,7 +9,9 @@ import './App.css';
 function ChemistList(){
   const chemists = sample_people.filter(chemist => chemist.profession === 'chemist');
   const chemistList = chemists.map(chemist => 
-    <li className='p-4 shadow-sm m-2 border rounded-md border-gray-200'>
+    <li 
+      key={chemist.id}
+      className='p-4 shadow-sm m-2 border rounded-md border-gray-200'>
       <img 
         className='rounded-full w-24 h-24'
         src={getImageUrl(chemist.imageId)}
