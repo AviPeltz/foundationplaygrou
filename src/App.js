@@ -1,9 +1,35 @@
 import React from 'react';
-import TeaGathering from './TeaGathering';
-import Clock from './Clock';
+import TeaGathering from './components/TeaGathering';
+import Clock from './components/Clock';
+import { sample_people } from './data/sample_people';
+import { getImageUrl } from './utils/utils';
 import './App.css';
 
 
+function ChemistList(){
+  const chemists = sample_people.filter(chemist => chemist.profession === 'chemist');
+  const chemistList = chemists.map(chemist => 
+    <li className='p-4 shadow-sm m-2 border rounded-md border-gray-200'>
+      <img 
+        className='rounded-full w-24 h-24'
+        src={getImageUrl(chemist.imageId)}
+        alt={chemist.name}
+        />
+      <p><b className='text-bold'>{chemist.name}</b>:
+      {' ' + chemist.profession + ' '}
+      known for {chemist.accomplishment}
+      </p>
+    </li>
+  );
+  return(
+    <div className='container p-2'>
+      <h1 className='text-xl font-bold'>Chemists of Note:</h1>
+      <ul className='m-1 p-2 border rounded-md border-gray-400'>
+        {chemistList}
+      </ul>
+    </div>
+  );
+}
 function FriendsList(){
   const friends = [
     'Creola Katherine Johnson: mathematician',
@@ -14,7 +40,7 @@ function FriendsList(){
   ];
   const friendsList = friends.map(friend => <li className='text-semibold font-serif'>{friend}</li>);
   return(
-    <div className='border rounded border-cyan-600 px-4'>
+    <div className='container border rounded p-4 border-cyan-600 '>
       <ol className='list-decimal p-2'>{friendsList}</ol>
     </div>
   );
@@ -53,7 +79,7 @@ export default function App() {
         <TeaGathering />
       </div>
       <FriendsList />
-      
+      <ChemistList />
     </section>
   );
 }
