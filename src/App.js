@@ -3,6 +3,23 @@ import TeaGathering from './TeaGathering';
 import Clock from './Clock';
 import './App.css';
 
+
+function FriendsList(){
+  const friends = [
+    'Creola Katherine Johnson: mathematician',
+    'Mario José Molina-Pasquel Henríquez: chemist',
+    'Mohammad Abdus Salam: physicist',
+    'Percy Lavon Julian: chemist',
+    'Subrahmanyan Chandrasekhar: astrophysicist'
+  ];
+  const friendsList = friends.map(friend => <li className='text-semibold font-serif'>{friend}</li>);
+  return(
+    <div className='border rounded border-cyan-600 px-4'>
+      <ol className='list-decimal p-2'>{friendsList}</ol>
+    </div>
+  );
+}
+
 function Recipe({ drinkers }){
   return(
     <ol className='p-4 list-decimal'>
@@ -35,6 +52,7 @@ export default function App() {
         <h2 className='text-xl font-semibold'>Product List for Tea Set:</h2>
         <TeaGathering />
       </div>
+      <FriendsList />
       
     </section>
   );
