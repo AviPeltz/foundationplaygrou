@@ -11,13 +11,13 @@ function ChemistList(){
   const chemistList = chemists.map(chemist => 
     <li 
       key={chemist.id}
-      className='p-4 shadow-sm m-2 border rounded-md border-gray-200'>
+      className='p-4 items-center grid grid-cols-[100px_1fr]  shadow-sm m-2 border rounded-md border-gray-200 '>
       <img 
         className='rounded-full w-24 h-24'
         src={getImageUrl(chemist.imageId)}
         alt={chemist.name}
         />
-      <p><b className='text-bold'>{chemist.name}</b>:
+      <p className=''><b className='text-bold'>{chemist.name}</b>:
       {' ' + chemist.profession + ' '}
       known for {chemist.accomplishment}
       </p>
