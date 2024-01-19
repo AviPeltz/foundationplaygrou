@@ -1,7 +1,7 @@
 import React from 'react';
 import TeaGathering from './components/TeaGathering';
 import Clock from './components/Clock';
-import  { Button, AlertButton }  from './components/buttons';
+import  { Button, AlertButton, PlayButton }  from './components/buttons';
 import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
 
@@ -64,7 +64,10 @@ export default function App() {
   return (
     <section className='mx-auto grid justify-center'>
       <div className='container p-3'>
-        <Button />
+        <Button onClick={() => alert('Custom button!')}>
+          my custom button
+        </Button>
+        <PlayButton movieName="Kung fu panda" />
         <AlertButton message='Hello World!'>
           Click me
         </AlertButton>
