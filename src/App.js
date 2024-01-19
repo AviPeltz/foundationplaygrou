@@ -1,8 +1,10 @@
 import React from 'react';
 import TeaGathering from './components/TeaGathering';
 import Clock from './components/Clock';
+import  { Button, AlertButton }  from './components/buttons';
 import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
+
 import './App.css';
 
 
@@ -62,6 +64,15 @@ export default function App() {
   return (
     <section className='mx-auto grid justify-center'>
       <div className='container p-3'>
+        <Button />
+        <AlertButton message='Hello World!'>
+          Click me
+        </AlertButton>
+        <AlertButton message='world wassup!'>
+          No Click me!
+        </AlertButton>
+      </div>
+      <div className='container p-3'>
         <Clock />
       </div>
       <div className='container p-4'>
@@ -81,6 +92,7 @@ export default function App() {
       </div>
       <FriendsList />
       <ChemistList />
+      
     </section>
   );
 }
