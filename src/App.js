@@ -59,11 +59,10 @@ function Recipe({ drinkers }){
 }
 
 export default function App() {
-  const time = new Date();
   return (
     <section className='mx-auto grid justify-center'>
       <div className='container p-3'>
-        <Clock time = {time}/>
+        <Clock />
       </div>
       <div className='container p-4'>
         <h1 className='text-3xl font-bold'>Spiced Chai Recipe</h1>

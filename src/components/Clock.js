@@ -1,5 +1,8 @@
 
-export default function Clock({ time }) {
+
+
+export default function Clock() {
+    const time = new Date();
     let hours = time.getHours();
     let colorName;
     if (hours >= 0 && hours <= 6) {
