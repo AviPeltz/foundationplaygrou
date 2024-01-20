@@ -59,10 +59,24 @@ function Recipe({ drinkers }){
     </ol>
   );
 }
+function ToolBarEventPropagator(){
+  return(
+    <div className="container p-3 rounded-md m-2 bg-slate-200" onClick={() => {alert('You clicked the toolbar :)')}}>
+      <h1 className='font-bold text-xl text-fuchsia-500'>Event propagating buttons:</h1>
+      <button className="bg-blue-300 shadow-md hover:shadow-none hover:bg-blue-400 rounded p-1" onClick={()=>alert("you clicked a button")}>
+        vanilla button
+      </button>
+      <Button onClick={() => alert('Custom button!')}>
+        new button
+      </Button>
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <section className='mx-auto grid justify-center'>
+      <ToolBarEventPropagator />
       <div className='container p-3'>
         <Button onClick={() => alert('Custom button!')}>
           my custom button
