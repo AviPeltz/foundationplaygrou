@@ -1,11 +1,25 @@
 
-export function Button({onClick, children}) {
+export function ButtonPropagator({onClick, children}) {
     return (
       <button onClick={onClick} className='bg-blue-500 hover:bg-blue-700 m-1 text-white font-bold py-2 px-4 rounded'>
         {children}
       </button>
     );
 }
+
+export function Button({onClick, children}) {
+  return (
+    <button className='bg-blue-500 hover:bg-blue-700 m-1 text-white font-bold py-2 px-4 rounded' 
+            onClick={e =>{
+              e.stopPropagation();
+              onClick();
+              
+    }}>
+      {children}
+    </button>
+  );
+}
+
 export function PlayButton({movieName}){
   function handlePlayButtonClick(){
     alert(`Playing ${movieName}`);

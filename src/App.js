@@ -1,7 +1,7 @@
 import React from 'react';
 import TeaGathering from './components/TeaGathering';
 import Clock from './components/Clock';
-import  { Button, AlertButton, PlayButton }  from './components/buttons';
+import  { Button, AlertButton, PlayButton, ButtonPropagator }  from './components/buttons';
 import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
 
@@ -66,16 +66,32 @@ function ToolBarEventPropagator(){
       <button className="bg-blue-300 shadow-md hover:shadow-none hover:bg-blue-400 rounded p-1" onClick={()=>alert("you clicked a button")}>
         vanilla button
       </button>
+      <ButtonPropagator onClick={() => alert('Custom button!')}>
+        new button
+      </ButtonPropagator>
+    </div>
+  );
+}
+function ToolBarEventStopped(){
+  return(
+    <div className="container p-3 rounded-md m-2 bg-slate-200" onClick={() => {alert('You clicked the toolbar :)')}}>
+      <h1 className='font-bold text-xl text-fuchsia-500'>Event stopped buttons:</h1>
       <Button onClick={() => alert('Custom button!')}>
+        Custom button
+      </Button>
+      <Button onClick={() => alert('new button')}>
         new button
       </Button>
     </div>
+
+
   );
 }
 
 export default function App() {
   return (
     <section className='mx-auto grid justify-center'>
+      <ToolBarEventStopped />
       <ToolBarEventPropagator />
       <div className='container p-3'>
         <Button onClick={() => alert('Custom button!')}>
