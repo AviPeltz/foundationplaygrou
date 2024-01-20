@@ -4,6 +4,7 @@ import Clock from './components/Clock';
 import  { Button, AlertButton, PlayButton, ButtonPropagator }  from './components/buttons';
 import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
+import Signup from './components/Signup';
 
 import './App.css';
 
@@ -108,6 +109,7 @@ export default function App() {
       <div className='container p-3'>
         <Clock />
       </div>
+      <Signup />
       <div className='container p-4'>
         <h1 className='text-3xl font-bold'>Spiced Chai Recipe</h1>
       </div>
