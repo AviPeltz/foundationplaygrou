@@ -6,8 +6,11 @@ export default function Gallery() {
     const [index, setIndex] = useState(0);
     const [showMore, setShowMore] = useState(false);
     //const numberOfSculptures = sculptureList.length;
+    let hasNext = index < (sculptureList.length - 1);
+    let hasPrev = index > 0;
+
     function handleNext(){
-        if(index < (sculptureList.length - 1)){
+        if(hasNext){
             setIndex(index + 1);
         }
         else{
@@ -15,7 +18,7 @@ export default function Gallery() {
         }
     }
     function handleBack(){
-        if(index > 0){
+        if(hasPrev){
             setIndex(index - 1);
         }
         else{
@@ -42,20 +45,23 @@ export default function Gallery() {
             />
             </center>
             <center>
-            {showMore ? <p className=" px-4 py-1 text-base">{sculpture.description}</p> : null }
             <Button onClick={handleShowMore}>
                 {showMore ? "Show Less" : "Show More"}
             </Button>
+            {showMore ? <p className=" px-4 py-1 text-base">{sculpture.description}</p> : null }
             </center>
             <center>
             <div className="container">
-                <Button onClick={handleBack}>
+                <Button 
+                    onClick={handleBack}
+                    disabled={!hasPrev}>
                     Back
                 </Button>
                 <span className="text-md ">  
                     ({index + 1} of {sculptureList.length})
                 </span>
-                <Button onClick={handleNext}>
+                <Button onClick={handleNext}
+                        disabled={!hasNext}>
                 Next
                 </Button>
             </div>

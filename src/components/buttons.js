@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 export function ButtonPropagator({onClick, children}) {
     return (
@@ -7,15 +8,26 @@ export function ButtonPropagator({onClick, children}) {
     );
 }
 
-export function Button({onClick, children}) {
-  const buttonStyleOne = "bg-white hover:bg-slate-50 rounded-md px-2 py-1 m-1 border shadow active:shadow-none hover:bg-slate-5";
+export function Button({onClick, isDisabled = false, children}) {
+  const [disabled, setDisabled] = useState(isDisabled);
+  const buttonStyleOne = "bg-white hover:bg-slate-50 rounded-md px-2 py-1 m-1 border shadow active:shadow-none hover:bg-slate-5 disabled:shadow-none disabled:bg-gray-300";  
+  
+  function handleDisabled(){
+    setDisabled(isDisabled);
+  }
+
   return (
+    // fix the disabled thing -> also maybe move away from tailwind or just get really good at it?
+    // or make your own components style library
+    // or radix ui
     <button className={buttonStyleOne} 
+            disabled={disabled}
             onClick={e =>{
               e.stopPropagation();
               onClick();
-              
-    }}>
+              handleDisabled();
+    }}
+    >
       {children}
     </button>
   );
