@@ -7,10 +7,20 @@ export default function Gallery() {
     const [showMore, setShowMore] = useState(false);
     //const numberOfSculptures = sculptureList.length;
     function handleNext(){
-        setIndex(index + 1);
+        if(index < (sculptureList.length - 1)){
+            setIndex(index + 1);
+        }
+        else{
+            setIndex(index);
+        }
     }
     function handleBack(){
-        setIndex(index - 1);
+        if(index > 0){
+            setIndex(index - 1);
+        }
+        else{
+            setIndex(index);
+        }
     }
     function handleShowMore(){
         setShowMore(!showMore);
