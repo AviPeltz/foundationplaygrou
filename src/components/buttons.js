@@ -8,8 +8,9 @@ export function ButtonPropagator({onClick, children}) {
 }
 
 export function Button({onClick, children}) {
+  const buttonStyleOne = "bg-white hover:bg-slate-50 rounded-md px-2 py-1 m-1 border shadow active:shadow-none hover:bg-slate-5";
   return (
-    <button className='bg-blue-500 hover:bg-blue-700 m-1 text-white font-bold py-2 px-4 rounded' 
+    <button className={buttonStyleOne} 
             onClick={e =>{
               e.stopPropagation();
               onClick();
