@@ -4,12 +4,16 @@ import { sculptureList } from "../data/sample_people";
 
 export default function Gallery() {
     const [index, setIndex] = useState(0);
+    const [showMore, setShowMore] = useState(false);
     //const numberOfSculptures = sculptureList.length;
     function handleNext(){
         setIndex(index + 1);
     }
     function handleBack(){
         setIndex(index - 1);
+    }
+    function handleShowMore(){
+        setShowMore(!showMore);
     }
 
     const sculpture = sculptureList[index];
@@ -27,9 +31,12 @@ export default function Gallery() {
             alt={sculpture.alt}
             />
             </center>
-            <p className=" px-4 py-1 text-base">
-                {sculpture.description}
-            </p>
+            <center>
+            {showMore ? <p className=" px-4 py-1 text-base">{sculpture.description}</p> : null }
+            <Button onClick={handleShowMore}>
+                {showMore ? "Show Less" : "Show More"}
+            </Button>
+            </center>
             <center>
             <div className="container">
                 <Button onClick={handleBack}>
@@ -43,7 +50,6 @@ export default function Gallery() {
                 </Button>
             </div>
             </center>
-            
         </div>
     );
 }
