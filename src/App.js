@@ -2,10 +2,11 @@ import React from 'react';
 import TeaGathering from './components/TeaGathering';
 import Clock from './components/Clock';
 import Gallery from './components/Gallery';
-import  { Button, AlertButton, PlayButton, ButtonPropagator }  from './components/buttons';
+import  { Button, AlertButton, PlayButton, ButtonPropagator }  from './components/Buttons';
 import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
 import Signup from './components/Signup';
+import Form from './components/Form';
 
 import './App.css';
 
@@ -110,6 +111,7 @@ export default function App() {
       <div className='container p-3'>
         <Clock />
       </div>
+      <Form />
       <Gallery />
       <Signup />
       <div className='container p-4'>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "./buttons";
+import { Button } from "./Buttons";
 import { sculptureList } from "../data/sample_people";
 
 export default function Gallery() {
