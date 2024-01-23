@@ -7,6 +7,7 @@ import { sample_people } from './data/sample_people';
 import { getImageUrl } from './utils/utils';
 import Signup from './components/Signup';
 import Form from './components/Form';
+import LevelPage from './components/Pages/LevelPage';
 
 import './App.css';
 
@@ -131,6 +132,8 @@ export default function App() {
       </div>
       <FriendsList />
       <ChemistList />
+      <LevelPage />
+      
       
     </section>
   );
