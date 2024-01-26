@@ -9,6 +9,7 @@ import { getImageUrl } from '../../utils/utils';
 import Signup from '../Signup';
 import Form from '../Form';
 import LevelPage from './LevelPage';
+import Textbox from '../Textbox';
 import { Link } from 'react-router-dom';
 
 import '../../App.css';
@@ -143,6 +144,9 @@ export default function MainApp() {
       <FriendsList />
       <ChemistList />
       <LevelPage />  
+      <div className='container p-3'>
+        <Textbox />
+      </div>
     </section>
     </>
   );
