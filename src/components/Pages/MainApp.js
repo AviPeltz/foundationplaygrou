@@ -10,6 +10,7 @@ import Signup from '../Signup';
 import Form from '../Form';
 import LevelPage from './LevelPage';
 import Textbox from '../Textbox';
+import  BadStateCounter, { GoodStateCounter } from '../StateCounter';
 import { Link } from 'react-router-dom';
 
 import '../../App.css';
@@ -124,6 +125,8 @@ export default function MainApp() {
         <Clock />
       </div>
       <Form />
+      <BadStateCounter />
+      <GoodStateCounter />
       <Gallery />
       <Signup />
       <div className='container p-4'>
