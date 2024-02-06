@@ -1,0 +1,131 @@
+/*
+theme: {
+    colors: {
+
+    },
+    fontFamily:{
+    
+    },
+    Components with dependancies:{
+    
+    }
+}
+------ Component Library ------
+
+
+------ Buttons ------
+{
+    buttons: {:hover, :active, :disabled }
+        - solid buttons
+            - primary -> vercel button
+            - secondary
+            - success
+            - danger
+            - warning
+            - info
+        - soft buttons
+            - primary
+            - secondary
+            - success
+            - danger
+            - warning
+            - info
+        - link
+        - icon button
+        - icon button with text
+        - menu button
+}
+
+
+------ Navbar ------
+    - Top Nav
+    - Sidebar Nav
+    - Multi-Column Sidebar
+    - Navbar with Search
+    - Tabs
+    - Breadcrumbs
+    - Steps
+    - Pagination
+    - Command Palettes
+
+
+------ Forms ------
+    - Form Layouts
+    - Input Groups
+    - Signin & Registration
+    - Select Menu
+    - Radio Groups
+    - Checkboxes
+    - Toggles
+    - File Upload
+    - Textareas
+    - Search Bar
+
+
+------ Cards ------
+
+------ Tables & Lists ------
+    - 
+
+------ Upload/Downloads ------
+   - 
+
+------ Avatars ------
+------ Badges ------
+
+
+
+------ Calendars ------
+
+------ Pagination ------
+
+------ Modals ------
+------ Alerts ------
+------ Tabs ------
+------ Gallery ------
+------ Accordions ------
+------ Progress Bars ------
+------ Tooltips ------
+
+------ Dropdowns ------
+
+
+
+------ Hero Section ------
+------ Footer Sections ------
+------ Contact Us Sections ------
+------ Dashboard Sections ------
+------ 404 Sections ------
+
+
+------ Layouts ------
+{
+    Layouts: 
+        Breakpoints: {
+            xs: 0px
+            sm: 640px
+            md: 768px
+            lg: 1024px
+            xl: 1280px
+            2xl: 1536px
+            3xl: 1920px
+        }
+        Container:{
+            - default
+            - fluid
+            - responsive
+            - list containers
+            - grid containers
+        }
+
+
+
+}
+
+
+
+
+
+
+
+*/

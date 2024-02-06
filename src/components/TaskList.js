@@ -4,13 +4,13 @@ import { useTasks, useTasksDispatch } from '../contexts/TaskContext';
 export default function TaskList() {
   const tasks = useTasks();
   return (
-    <ul className=''>
-      {tasks.map(task => (
-        <li key={task.id}>
-          <Task task={task} />
-        </li>
-      ))}
-    </ul>
+      <ul>
+        {tasks.map(task => (
+          <li key={task.id}>
+            <Task task={task} />
+          </li>
+        ))}
+      </ul>
   );
 }
 
@@ -49,7 +49,7 @@ function Task({ task }) {
     );
   }
   return (
-    <div className='bg-green-100 rounded m-1'>
+    <div className='bg-green-100 rounded m-1 min-w-fit'>
     <label>
       <input
         className='accent-inherit mx-1'

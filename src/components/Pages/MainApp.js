@@ -11,7 +11,9 @@ import Form from '../Form';
 import LevelPage from './LevelPage';
 import Textbox from '../Textbox';
 import  BadStateCounter, { GoodStateCounter } from '../StateCounter';
+import Accordion from '../SharedState';
 import { Link } from 'react-router-dom';
+
 
 import '../../App.css';
 
@@ -150,6 +152,7 @@ export default function MainApp() {
       <div className='container p-3'>
         <Textbox />
       </div>
+      <Accordion />
     </section>
     </>
   );

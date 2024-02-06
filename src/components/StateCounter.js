@@ -27,7 +27,9 @@ export function GoodStateCounter(){
             <p className="font-bold text-lg p-2">Good State Counter</p>
             <button className="bg-blue-100 m-1 shadow border hover:shadow-none rounded py-1 px-5" 
                     onClick={() => {
-                        setCount(count + 3);
+                        setCount(c => c + 1);
+                        setCount(c => c + 1);
+                        setCount(c => c + 1);
                         }}>
                         +3
             </button>
