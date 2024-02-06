@@ -1,8 +1,11 @@
 import HeadingLevel from "../HeadingLevel";
 import SectionLevel from "../SectionLevel";
+import MyNavBar from "../MyNavBar";
 
 export default function LevelPage() {
     return(
+        <>
+        <MyNavBar />
         <SectionLevel>
             <HeadingLevel>Title</HeadingLevel>
             <SectionLevel>
@@ -31,5 +34,6 @@ export default function LevelPage() {
                 </SectionLevel>
             </SectionLevel>
         </SectionLevel>
+        </>
     );
 }

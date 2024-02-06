@@ -1,9 +1,12 @@
 import TaskList from "../TaskList";
 import AddTask from "../AddTask";
 import { TasksProvider } from "../../contexts/TaskContext";
+import MyNavBar from "../MyNavBar";
 
 export default function TaskApp(){
     return(
+        <>
+        <MyNavBar />
         <center>
         <div className="border p-2 mx-96 my-4 rounded bg-slate-200 min-w-fit">
         <TasksProvider>
@@ -13,5 +16,6 @@ export default function TaskApp(){
         </TasksProvider>
         </div>
         </center>
+        </>
     );
 }

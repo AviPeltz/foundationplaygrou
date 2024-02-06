@@ -2,6 +2,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import  MainApp from './components/Pages/MainApp';
 import  LevelPage from './components/Pages/LevelPage';
 import TaskApp from './components/Pages/TaskApp';
+import CanvasApp from './components/Pages/CanvasApp';
 import React from 'react';
 import './style.css'
 
@@ -14,6 +15,7 @@ export default function App(){
           <Route path="/" element={<MainApp />} />
           <Route path="/level" element={<LevelPage />} />
           <Route path="/task" element={<TaskApp />} />
+          <Route path="/canvas" element={<CanvasApp />} />
         </Routes>
       </BrowserRouter>
     </div>
