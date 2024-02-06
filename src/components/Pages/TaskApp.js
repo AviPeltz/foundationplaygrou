@@ -4,6 +4,7 @@ import { TasksProvider } from "../../contexts/TaskContext";
 
 export default function TaskApp(){
     return(
+        <center>
         <div className="border p-2 mx-96 my-4 rounded bg-slate-200 min-w-fit">
         <TasksProvider>
             <h1 className="font-bold text-center text-2xl">Avi's Todo List</h1>
@@ -11,5 +12,6 @@ export default function TaskApp(){
             <TaskList />
         </TasksProvider>
         </div>
+        </center>
     );
 }
