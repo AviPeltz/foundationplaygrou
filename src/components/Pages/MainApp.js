@@ -10,7 +10,8 @@ import Signup from '../Signup';
 import Form from '../Form';
 import LevelPage from './LevelPage';
 import Textbox from '../Textbox';
-import MovingDot from '../MovingDot';
+import ContactForm from '../ContactForm';
+
 import  BadStateCounter, { GoodStateCounter } from '../StateCounter';
 import Accordion from '../SharedState';
 import MyNavBar from '../MyNavBar';
@@ -151,7 +152,7 @@ export default function MainApp() {
         <Accordion />
       </div>
       <div className='container p-3'>
-
+        <ContactForm /> 
       </div>
 
     </section>
