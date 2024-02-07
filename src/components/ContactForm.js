@@ -2,20 +2,28 @@ import { useState  } from 'react';
 
 
 export default function ContactForm() {
-    const [name, setName] = useState({
+    const [person, setPerson] = useState({
         firstName: 'Barbara',
         lastName: 'Hepworth',
         email: 'bhepworth@sculpture.com',
     });
+    /*
     function handleFirstNameChange(e){
-        setName({...name, firstName: e.target.value});
+        setPerson({...person, firstName: e.target.value});
     }
     function handleLastNameChange(e){
-        setName({...name, lastName: e.target.value});
+        setPerson({...person, lastName: e.target.value});
     }
     function handleEmailChange(e){
-        setName({...name, email: e.target.value});
+        setPerson({...person, email: e.target.value});
+    }*/
+    function handleChange(e){
+        setPerson({
+            ...person,
+            [e.target.name]: e.target.value
+        });
     }
+
 
     return(
         <div className='w-full max-w-xs'>
@@ -24,30 +32,31 @@ export default function ContactForm() {
                     <label className='block text-gray-700 text-sm font-bold mb-2'>First Name: </label>
                     <input className='shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
                             type='text' 
+                            name='firstName'
                             placeholder='First Name' 
-                            value={name.firstName} 
-                            onChange={handleFirstNameChange}/>
+                            value={person.firstName} 
+                            onChange={handleChange}/>
                 </div>
                 <div className='mb-6'>
-                    <label className='block text-gray-700 text-sm font-bold mb-2'>First Name: </label>
+                    <label className='block text-gray-700 text-sm font-bold mb-2'>Last Name: </label>
                     <input className='shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
                             type='text' 
+                            name='lastName'
                             placeholder='Last Name' 
-                            value={name.lastName} 
-                            onChange={handleLastNameChange}/>
+                            value={person.lastName} 
+                            onChange={handleChange}/>
                 </div>
                 <div className='mb-8'>
-                    <label className='block text-gray-700 text-sm font-bold mb-2'>First Name: </label>
+                    <label className='block text-gray-700 text-sm font-bold mb-2'>Email: </label>
                     <input className='shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
                             type='email' 
+                            name='email'
                             placeholder='Email' 
-                            value={name.email} 
-                            onChange={handleEmailChange}/>
+                            value={person.email} 
+                            onChange={handleChange}/>
                 </div>
+                <p className='font-semibold'>{person.firstName+ " " + person.lastName + " " + person.email}</p>
             </form>
-            <div>
-                <p></p>
-            </div>
         </div>
     );
 }
