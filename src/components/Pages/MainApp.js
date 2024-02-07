@@ -15,6 +15,7 @@ import ContactForm from '../ContactForm';
 import  BadStateCounter, { GoodStateCounter } from '../StateCounter';
 import Accordion from '../SharedState';
 import MyNavBar from '../MyNavBar';
+import ImmerForm from '../ImmerForm';
 
 
 import '../../App.css';
@@ -153,6 +154,9 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
         <ContactForm /> 
+      </div>
+      <div className='container p-3'>
+         <ImmerForm />
       </div>
 
     </section>
