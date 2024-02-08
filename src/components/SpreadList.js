@@ -29,12 +29,12 @@ export default function SpreadList(){
             <button 
                 className='bg-cyan-200 hover:bg-cyan-400 rounded py-1 px-3 m-1'
                 onClick={buttonHandler}>
-                Add
+                add
             </button>
             <ul>
                 {todoList.map(todo => (
-                <div className='table'>
-                    <div key={todo.id}className='table-row'>
+                <div className='table-row-group'>
+                    <div key={todo.id}className='rounded table-row'>
                         <li className='table-cell' key={todo.id}>{todo.todo}</li>
                         <button 
                         key={todo.id}
@@ -44,7 +44,12 @@ export default function SpreadList(){
                                 todoList.filter(t => t.id !== todo.id)
                             );
                         }}>
-                        Delete
+                        delete
+                        </button>
+                        <button 
+                        key={todo.id}
+                        className='table-cell bg-yellow-200 hover:bg-yellow-400 rounded py-1 px-3 m-1'>
+                        edit
                         </button>
                     </div>
                 </div>
