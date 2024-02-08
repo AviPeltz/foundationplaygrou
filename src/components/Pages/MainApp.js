@@ -17,6 +17,7 @@ import Accordion from '../SharedState';
 import MyNavBar from '../MyNavBar';
 import ImmerForm from '../ImmerForm';
 import SpreadList from '../SpreadList';
+import TripleSlider from '../TripleSlider';
 
 
 import '../../App.css';
@@ -162,6 +163,10 @@ export default function MainApp() {
       <div className='container p-3'>
         <SpreadList />
       </div>
+      <div className='container p-3'>
+        <TripleSlider />
+      </div>
+      
 
     </section>
     </>
