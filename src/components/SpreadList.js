@@ -1,9 +1,19 @@
 import { useState } from 'react';
 
 let todoIndex = 0;
+
 export default function SpreadList(){
     const [todo, setTodo] = useState('')
     const [todoList, setTodoList] = useState([])
+    
+    function buttonHandler(){
+        setTodoList([
+            ...todoList,
+            {id: todoIndex++, todo:todo}
+        ]);
+        setTodo('');
+    }
+    
     return(
         <div className='border rounded p-2'>
             <h1 className='font-bold text-lg'>Todo List</h1>
@@ -18,12 +28,7 @@ export default function SpreadList(){
             />
             <button 
                 className='bg-cyan-200 hover:bg-cyan-400 rounded py-1 px-3 m-1'
-                onClick={() => {
-                    setTodoList([
-                        ...todoList,
-                        {id: todoIndex++, todo:todo}
-                    ]);
-                }}>
+                onClick={buttonHandler}>
                 Add
             </button>
             <ul>
