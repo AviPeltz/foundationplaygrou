@@ -16,6 +16,7 @@ import  BadStateCounter, { GoodStateCounter } from '../StateCounter';
 import Accordion from '../SharedState';
 import MyNavBar from '../MyNavBar';
 import ImmerForm from '../ImmerForm';
+import SpreadList from '../SpreadList';
 
 
 import '../../App.css';
@@ -157,6 +158,9 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
          <ImmerForm />
+      </div>
+      <div className='container p-3'>
+        <SpreadList />
       </div>
 
     </section>
