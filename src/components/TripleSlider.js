@@ -39,24 +39,26 @@ export default function TripleSlider(){
 
             <div className='mx-1 my-2'>
                 <h2 className='font-semibold'>Formality: </h2>
-                <label>Casual</label>
+                <label className='p-1'>Casual</label>
                 <input type="range" 
                         min="0" max="100" 
                         name="formality" 
+                        className='w-auto h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700'
                         value={writingSettings[1].value}
                         onChange={handleSliderChange}/>
-                <label>Formal</label>
+                <label className='p-1'>Formal</label>
             </div>
             <div className='mx-1 my-2'>
-                <h2 className='font-semibold'>Reading Age: <span className='font-normal text-blue-500'>{writingSettings[2].value}</span></h2>
-                <label>6</label>
+                <h2 className='font-semibold'>Reading Age: [ <span className='font-normal text-blue-500'>{writingSettings[2].value}</span> ]</h2>
+                <label className='p-1'>6</label>
                 <input type="range" 
                         min="6" max="22" 
                         name="reading_age" 
+                        className='w-auto h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm dark:bg-gray-700'
                         value={writingSettings[2].value}
                         onChange={handleSliderChange}
                         />
-                <label>22+</label>
+                <label className='p-1'>22+</label>
             </div>
         </aside>
     );

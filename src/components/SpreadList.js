@@ -6,7 +6,7 @@ export default function SpreadList(){
     const [todo, setTodo] = useState('')
     const [todoList, setTodoList] = useState([])
     
-    function buttonHandler(){
+    function addButtonHandler(){
         setTodoList([
             ...todoList,
             {id: todoIndex++, todo:todo}
@@ -28,7 +28,7 @@ export default function SpreadList(){
             />
             <button 
                 className='bg-cyan-200 hover:bg-cyan-400 rounded py-1 px-3 m-1'
-                onClick={buttonHandler}>
+                onClick={addButtonHandler}>
                 add
             </button>
             <ul>
@@ -48,7 +48,8 @@ export default function SpreadList(){
                         </button>
                         <button 
                         key={todo.id}
-                        className='table-cell bg-yellow-200 hover:bg-yellow-400 rounded py-1 px-3 m-1'>
+                        className='table-cell bg-yellow-200 hover:bg-yellow-400 rounded py-1 px-3 m-1'
+                        >
                         edit
                         </button>
                     </div>

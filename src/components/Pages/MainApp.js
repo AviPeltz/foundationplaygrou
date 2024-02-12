@@ -18,7 +18,7 @@ import MyNavBar from '../MyNavBar';
 import ImmerForm from '../ImmerForm';
 import SpreadList from '../SpreadList';
 import TripleSlider from '../TripleSlider';
-
+import CityQuiz from '../CityQuiz';
 
 import '../../App.css';
 
@@ -165,6 +165,9 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
         <TripleSlider />
+      </div>
+      <div className='container p-3'>
+        <CityQuiz />
       </div>
       
 
