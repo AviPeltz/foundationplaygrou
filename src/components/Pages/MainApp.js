@@ -19,7 +19,7 @@ import ImmerForm from '../ImmerForm';
 import SpreadList from '../SpreadList';
 import TripleSlider from '../TripleSlider';
 import CityQuiz from '../CityQuiz';
-import NestedBS from '../NestedBS';
+import MyAccordion from '../MyAccordion';
 
 import '../../App.css';
 
@@ -174,6 +174,7 @@ export default function MainApp() {
         {/*<NestedBS />*/}
         <p className='text-lg font-bold'>tailwind sucks for lists -> NestedBS Example dont work here cause it wants me to define the inherent DOM structure</p>
       </div>
+      <MyAccordion />
 
     </section>
     </>
