@@ -20,6 +20,7 @@ import SpreadList from '../SpreadList';
 import TripleSlider from '../TripleSlider';
 import CityQuiz from '../CityQuiz';
 import MyAccordion from '../MyAccordion';
+import SimpleTask from '../SimpleTask';
 
 import '../../App.css';
 
@@ -172,9 +173,15 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
         {/*<NestedBS />*/}
-        <p className='text-lg font-bold'>tailwind sucks for lists -> NestedBS Example dont work here cause it wants me to define the inherent DOM structure</p>
+        <p className='text-lg font-bold'>tailwind sucks for lists  NestedBS Example dont work here cause it wants me to define the inherent DOM structure</p>
       </div>
-      <MyAccordion />
+      <div>
+        <MyAccordion />
+      </div>
+      <div>
+        <SimpleTask />
+      </div>
+
 
     </section>
     </>

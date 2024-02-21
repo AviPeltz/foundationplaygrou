@@ -13,7 +13,7 @@ export default function SpreadList(){
         ]);
         setTodo('');
     }
-    
+
     return(
         <div className='border rounded p-2'>
             <h1 className='font-bold text-lg'>Todo List</h1>
