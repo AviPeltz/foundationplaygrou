@@ -21,6 +21,7 @@ import TripleSlider from '../TripleSlider';
 import CityQuiz from '../CityQuiz';
 import MyAccordion from '../MyAccordion';
 import SimpleTask from '../SimpleTask';
+import ContextPage from '../NoteContext/ContextPage';
 
 import '../../App.css';
 
@@ -180,6 +181,9 @@ export default function MainApp() {
       </div>
       <div>
         <SimpleTask />
+      </div>
+      <div className='container p-3'>
+        <ContextPage />
       </div>
 
 
