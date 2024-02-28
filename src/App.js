@@ -3,6 +3,7 @@ import  MainApp from './components/Pages/MainApp';
 import  LevelPage from './components/Pages/LevelPage';
 import TaskApp from './components/Pages/TaskApp';
 import CanvasApp from './components/Pages/CanvasApp';
+import ProjectsPage from './components/Pages/ProjectsPage';
 import React from 'react';
 import './style.css'
 
@@ -16,6 +17,7 @@ export default function App(){
           <Route path="/level" element={<LevelPage />} />
           <Route path="/task" element={<TaskApp />} />
           <Route path="/canvas" element={<CanvasApp />} />
+          <Route path="/project" element={<ProjectsPage />} />
         </Routes>
       </BrowserRouter>
     </div>

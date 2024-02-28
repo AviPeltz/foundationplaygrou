@@ -8,6 +8,7 @@ export default function ContextPage(){
         <Section>
             <Heading>Context Test Page</Heading>
             <ProfilePage />
+            <AllPosts />
         </Section>
     );
 }
