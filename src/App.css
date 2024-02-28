@@ -11,7 +11,7 @@ nav.projectNav {
 div.navLinks{
     display: flex;
     height: 28px;
-    padding: 4px 11px;
+    
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -19,12 +19,15 @@ div.navLinks{
 a.navLink:hover{
     color: #3E8AFB;
 }
+
+/* add conditional for different size screens -> for padding: */
 a.navLink {
     text-align: center;
     font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
     font-family: "SF Pro Text";
     font-size: 16px;
     font-style: normal;
+    padding: 4px 11px;
     font-weight: 400;
     line-height: 20px; /* 125% */
 }
@@ -40,6 +43,7 @@ a.navLink_selected {
     font-weight: 700;
     line-height: 20px; /* 125% */
 }
+
 div.avatarDropdown {
     display: flex;
     width: 140px;
@@ -110,6 +114,7 @@ img.projectCard{
     border-radius: 8px;
 
 }
+
 div.projectCardContent{
     display: flex;
     width: 225px;

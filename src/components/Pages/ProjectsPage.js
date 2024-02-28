@@ -96,7 +96,7 @@ export function NavLinks({ navItems }){
 export function AvatarDropdown({ Name, AvatarURL, navItems }){
     return(
     <div className="avatarDropdown">
-        <p>Avi Peltz</p>
+        <a href="#">Avi Peltz</a>
     </div>
     );
 }
@@ -127,6 +127,13 @@ export function ProjectsGallery({ children, projects }){
     </div>
     );
 }
+export function EllipseButton({handleClick}){
+    return(
+    <button onClick={handleClick}>
+        <EllipseIcon />
+    </button>
+    );
+}
 export function ProjectCard({ project }){
     return(
     <div className="projectCard">
@@ -135,7 +142,7 @@ export function ProjectCard({ project }){
             <h3 className="projectCardContent">{project.type}</h3>
             <PixelWiseIcon />
             <h2 className="projectCardContent">{project.name}</h2>
-            <EllipseIcon />
+            <EllipseButton />
             <p className="projectCardContent">last edited: '1 month ago'</p>
 
         </div>
