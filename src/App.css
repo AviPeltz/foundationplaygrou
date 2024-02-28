@@ -3,11 +3,50 @@ body{
 }
 nav.projectNav {
     display: flex;
-    width: 1512px;
-    height: 75px;
     padding: 13px 24px;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
+}
+div.navLinks{
+    display: flex;
+    height: 28px;
+    padding: 4px 11px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+a.navLink:hover{
+    color: #3E8AFB;
+}
+a.navLink {
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+}
+a.navLink_selected:hover{
+    color: #3E8AFB;
+}
+a.navLink_selected {
+    text-align: center;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 125% */
+}
+div.avatarDropdown {
+    display: flex;
+    width: 140px;
+    height: 32px;
+    padding: 2px 0px;
+    align-items: center;
+    gap: 8px;
     flex-shrink: 0;
 }
 /* add conditional for different size screens */
@@ -59,4 +98,53 @@ div.projectCard{
     /** Style **/
     border-radius: 8px;
     background: #FFF;
+}
+div.projectCard:hover{
+    background-color: #e4eefd;
+}
+img.projectCard{
+    /** Layout **/
+    width: 225px;
+    height: 155px;
+    /** Style **/
+    border-radius: 8px;
+
+}
+div.projectCardContent{
+    display: flex;
+    width: 225px;
+    padding-bottom: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+
+}
+h2.projectCardContent{
+    /** Style **/
+    color: #212936;
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 590;
+    line-height: normal;
+}
+h3.projectCardContent{
+    /** Style **/
+    color: #3E8AFB;
+    font-feature-settings: 'cv11' on, 'cv01' on, 'ss01' on;
+    font-family: "SF Pro Text";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 181.818% */
+}
+
+p.projectCardContent{
+    color: #888;
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 7px;
 }
