@@ -54,6 +54,15 @@ const projects = [
 
     }
 ];
+ const userAvatar = [
+    {
+        id: 0,
+        name: "Avi Peltz",
+        avatarURL:"../../assets/ByeWind.png",
+        navItems: null,
+    }
+];
+
 export default function ProjectsPage(){
     return(
         <>
@@ -68,12 +77,12 @@ export default function ProjectsPage(){
         </>
     );
 }
-export function ProjectNav({ navItems }){
+export function ProjectNav({navItems }){
     return(
         <nav className='projectNav'>
             <NavBrand />
             <NavLinks navItems={navItems} />
-            <AvatarDropdown />
+            <AvatarDropdown avatar={userAvatar[0]} />
         </nav>
     );
 }
@@ -93,10 +102,14 @@ export function NavLinks({ navItems }){
         </div>
     );
 }
-export function AvatarDropdown({ Name, AvatarURL, navItems }){
+export function AvatarDropdown({ avatar, navItems }){
     return(
     <div className="avatarDropdown">
-        <a href="#">Avi Peltz</a>
+        <img href={avatar.avatarURL} alt="avatar" /> 
+        <a href="#">{avatar.name}</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 6.15967C3.84171 5.94678 4.15829 5.94678 4.35355 6.15967L7.64645 9.75C7.84171 9.9629 8.15829 9.9629 8.35355 9.75L11.6464 6.15968C11.8417 5.94678 12.1583 5.94678 12.3536 6.15968C12.5488 6.37257 12.5488 6.71775 12.3536 6.93065L9.06066 10.521C8.47487 11.1597 7.52513 11.1597 6.93934 10.521L3.64645 6.93065C3.45118 6.71775 3.45118 6.37257 3.64645 6.15967Z" fill="black"/>
+        </svg>
     </div>
     );
 }
@@ -111,13 +124,18 @@ export function ProjectsHeading(){
     return(
     <div className="projectHeading">
         <h1 className="projectHeading">Projects</h1>
-        <Button>Add Project</Button>
+        <NewProjectButton />
     </div>
     );
 }
 export function NewProjectButton({handleClick}){
     return(
-    <button onClick={handleClick}></button>
+    <button className="projectHeading" onClick={handleClick}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+            <path d="M8 3.07692V4.92308H4.92308V8H3.07692V4.92308H0V3.07692H3.07692V0H4.92308V3.07692H8Z" fill="white"/>
+        </svg>
+        New Project
+    </button>
     );
 }
 export function ProjectsGallery({ children, projects }){
