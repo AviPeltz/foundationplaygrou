@@ -58,7 +58,7 @@ const projects = [
     {
         id: 0,
         name: "Avi Peltz",
-        avatarURL:"../../assets/ByeWind.png",
+        avatarURL:"https://github.com/AviPeltz/foundationplaygrou/blob/718dd010e42d3c2218008b19f344e38163b20bc5/src/assets/ByeWind.png",
         navItems: null,
     }
 ];
@@ -105,7 +105,7 @@ export function NavLinks({ navItems }){
 export function AvatarDropdown({ avatar, navItems }){
     return(
     <div className="avatarDropdown">
-        <img href={avatar.avatarURL} alt="avatar" /> 
+        <img src={avatar.avatarURL} alt="avatar" /> 
         <a href="#">{avatar.name}</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 6.15967C3.84171 5.94678 4.15829 5.94678 4.35355 6.15967L7.64645 9.75C7.84171 9.9629 8.15829 9.9629 8.35355 9.75L11.6464 6.15968C11.8417 5.94678 12.1583 5.94678 12.3536 6.15968C12.5488 6.37257 12.5488 6.71775 12.3536 6.93065L9.06066 10.521C8.47487 11.1597 7.52513 11.1597 6.93934 10.521L3.64645 6.93065C3.45118 6.71775 3.45118 6.37257 3.64645 6.15967Z" fill="black"/>

@@ -18,6 +18,7 @@ export default function App(){
           <Route path="/task" element={<TaskApp />} />
           <Route path="/canvas" element={<CanvasApp />} />
           <Route path="/project" element={<ProjectsPage />} />
+          <Route path="/project/new_project"/>
         </Routes>
       </BrowserRouter>
     </div>
