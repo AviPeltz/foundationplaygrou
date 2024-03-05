@@ -6,7 +6,7 @@ import Section, { ProfilePage, AllPosts} from './Section';
 export default function ContextPage(){
     return(
         <Section>
-            <Heading>Context Test Page</Heading>
+            <Heading>Avi's Blog</Heading>
             <ProfilePage />
             <AllPosts />
         </Section>
