@@ -23,9 +23,11 @@ import MyAccordion from '../MyAccordion';
 import SimpleTask from '../SimpleTask';
 import RefCounter from '../RefCounter';
 import RefFocus from '../RefFocus';
+import EffectPlayer from '../EffectPlayer';
 import ContextPage from '../NoteContext/ContextPage';
 
 import '../../App.css';
+
 
 
 function ChemistList(){
@@ -192,6 +194,9 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
         <RefFocus />
+      </div>
+      <div className='container p-3'>
+        <EffectPlayer />
       </div>
 
 
