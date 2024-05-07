@@ -4,7 +4,7 @@ import { useState } from 'react';
 /**
  * - NewProjectNav
  *      - BackButton
- *      - 
+ *      - NavBrand
  *      - AvatarDropdown -> from ProjectPage
  * - NewProjectForm 
  *      - NewProjectHeading
@@ -60,7 +60,20 @@ export default function NewProject(){
 export function NewProjectNav(){
     return(
         <div>
-            
+            {/* <- Projects (BackButton) */}
+            {/* NavBrand */}
+            {/* AvatarDropdown */}
+        </div>
+    );
+}
+export function NewProjectForm(){
+    return(
+        <div>
+            <NewProjectHeading />
+            <ProjectNameForm />
+            <ProjectTypeForm />
+            <ClassesInputForm />
+            <CreateProjectButton />
         </div>
     );
 }
