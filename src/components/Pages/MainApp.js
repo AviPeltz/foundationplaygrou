@@ -21,6 +21,8 @@ import TripleSlider from '../TripleSlider';
 import CityQuiz from '../CityQuiz';
 import MyAccordion from '../MyAccordion';
 import SimpleTask from '../SimpleTask';
+import RefCounter from '../RefCounter';
+import RefFocus from '../RefFocus';
 import ContextPage from '../NoteContext/ContextPage';
 
 import '../../App.css';
@@ -185,6 +187,13 @@ export default function MainApp() {
       <div className='container p-3'>
         <ContextPage />
       </div>
+      <div className='container p-3'>
+        <RefCounter />
+      </div>
+      <div className='container p-3'>
+        <RefFocus />
+      </div>
+
 
 
     </section>
