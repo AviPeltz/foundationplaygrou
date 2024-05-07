@@ -1,5 +1,11 @@
-import { useState } from "react";
-
-export default function Chat(){
-    
+export function createConnection(){
+    // A real implementation would actually connect to a server
+    return {
+        connect() {
+            console.log('✅ Connecting...');
+        },
+        disconnect() {
+            console.log('❌ Disconnected.');
+        }
+    }
 }
