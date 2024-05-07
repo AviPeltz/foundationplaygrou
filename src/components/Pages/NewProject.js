@@ -45,6 +45,16 @@ export const projectTypes = [
         description:"pixelwise labels of each objects",
     },
 ]
+export const newProjectFormResults = [
+    {
+        id: 0,
+        projectName: "My First Project",
+        projectType: "Instance Segmentation",
+        classes: ["class1", "class2", "class3"],
+        dateTimeCreated: '2024-05-07 14:36:19.842312',
+    }
+];
+
 export default function NewProject(){
     const [isValid, setIsValid] = useState(false);
     const [formStates, setFormStates] = useState([false, false, false]);
