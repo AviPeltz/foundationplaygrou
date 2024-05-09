@@ -9,6 +9,8 @@ export default function MyNavBar(){
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/level">Level App</Link>
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/canvas">Canvas App</Link>
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/project">TensorMaker</Link>
+                <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/generate">Generate</Link>
+
             </div>
         </section>
     );
