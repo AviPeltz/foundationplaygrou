@@ -116,7 +116,6 @@ div.generateHero{
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    border-bottom: 1px solid var(--Product-Medium-Gray, #E0E0E0);
 }
 div div.generateHero{
     display: flex;

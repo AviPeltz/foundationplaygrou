@@ -9,7 +9,7 @@ import { ProjectNav } from './ProjectsPage';
  *      - ✅ NavLinks
  *      - AvatarDropdown 
  * - GenerateSection
- *    - GenerateHeading
+ *    - ✅ GenerateHeading
  *    - GenerateForm
  *      - GenerateInput
  *      - GenerateTabs
