@@ -81,7 +81,7 @@ export default function GeneratePage(){
 export function GenerateSection({ heroSection }){
     
     return(
-        <div>
+        <div className='pt-24'>
             <GenerateHero heroSection={heroSection} />
         </div>
     );
@@ -129,14 +129,17 @@ export function GenerateForm(){
                         name="prompt"
                         value={prompt.prompt}
                     />
-                    <div>
-                        <input type="radio" id="fast" name="modelType" value="Fast" checked={prompt.modelType === "Fast"} onChange={handleChange}/>
-                        <button className='submitButton'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12.562 5.24979L19.312 11.9998L12.562 18.7498" stroke="#3E8AFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M18.3752 12H4.6877" stroke="#3E8AFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+                    <div className='lowerRow'>
+                        <input type="checkbox" role="switch" className="toggle"/>
+                        <div>
+                            {/*<input type="radio" id="fast" name="modelType" value="Fast" checked={prompt.modelType === "Fast"} onChange={handleChange}/>*/}
+                            <button className='submitButton'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12.562 5.24979L19.312 11.9998L12.562 18.7498" stroke="#3E8AFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18.3752 12H4.6877" stroke="#3E8AFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
             </form>
         </div>
