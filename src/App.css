@@ -101,6 +101,27 @@ h4.generateHero{
     font-weight: 400;
     line-height: 20px; /* 100% */
 }
+h1.exploreHeading{
+    color: var(--Product-Primary, #212936);
+    font-family: "SF Pro Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 90% */
+    padding-left: 64px;
+    padding-top:36px;
+}
+div.generateSection{
+    display: flex;
+    padding-top:96px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-left: 64px;
+    margin-right: 64px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Product-Medium-Gray, #E0E0E0);
+}
 @media screen and (max-width: 768px) {
     h1.generateHero{
         font-size: 36px;
@@ -108,7 +129,27 @@ h4.generateHero{
     h4.generateHero{
         font-size: 16px;
     }
+    h1.exploreHeading{
+        font-size: 32px;
+    }
+    
 }
+@media screen and (max-width: 512px) {
+    h1.generateHero{
+        font-size: 32px;
+    }
+    h4.generateHero{
+        font-size: 14px;
+    }
+    h1.exploreHeading{
+        font-size: 28px;
+    }
+    div.generateSection{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 div.lowerRow{
     display: flex;
     justify-content: flex-end;
@@ -116,6 +157,87 @@ div.lowerRow{
     gap: 10px;
     flex: 1 0 0;
 }
+
+.exploreSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; 
+}
+div.sliderContainer{
+    display: flex;
+    width: 327px;
+    height: 54px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 58px;
+}
+div.tabSlider{
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 3px solid #FFF;
+    background: radial-gradient(88.71% 64.71% at 49.8% 58.82%, rgba(234, 234, 234, 0.01) 0%, rgba(107, 114, 128, 0.04) 100%), #FAFAFA;
+    box-shadow: -6px -10px 6px 0px rgba(255, 255, 255, 0.60) inset, -4px 0px 16.4px -6px rgba(0, 0, 0, 0.05) inset, -20px -12px 60px 0px rgba(255, 255, 255, 0.20), 4px 4px 4px 0px rgba(0, 0, 0, 0.03);
+}
+div.tabLinkSelected{
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    border-bottom: 3px solid #30D946;
+    background: #FFF;
+    box-shadow: 8px 8px 16px 0px rgba(255, 255, 255, 0.55), 4px 5px 24px 0px rgba(0, 0, 0, 0.15);
+    color: #374151;
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: 0.42px;
+}
+div.tabLinkSelected:hover{
+    box-shadow: 0px 4px 8px 0px rgba(48, 217, 70, 0.15), 4px 5px 24px 0px rgba(0, 0, 0, 0.15);
+}
+div.tabLinkUnselected{
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    color: #7E86A3;
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: 0.42px;
+}
+div.tabLinkUnselected:hover{
+    color: #374151;
+}
+
+div.genCard{
+    display: flex;
+    max-width: 434px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #EAEAEA;
+}
+
+
+
 .toggle {
     --color: chartreuse;
     appearance: none;

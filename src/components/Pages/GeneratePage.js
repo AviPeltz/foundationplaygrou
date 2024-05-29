@@ -3,6 +3,8 @@ import TensorIcon from "../../assets/TensorIcon";
 import "../../App.css";
 import { Button } from "../Buttons";
 import { ProjectNav } from './ProjectsPage';
+
+import Tabs from '../Tabs';
 /**
  * - ✅ NavBar
  *      - ✅ NavBrand
@@ -24,6 +26,9 @@ import { ProjectNav } from './ProjectsPage';
  *          - ProjectCard
  *              - 
  */
+
+
+
 const navItems =[
     {
         name: "Generate",
@@ -45,7 +50,10 @@ const navItems =[
         link: "/pricing",
         isSelected: false,
     },
-]
+];
+
+
+
 const heroSection = [
     {
         id: 0,
@@ -71,17 +79,55 @@ const userPrompt = [{
 export default function GeneratePage(){
     return(
         <>
-            <ProjectNav navItems={navItems}/>
-            <GenerateSection heroSection={heroSection[0]} />
+        <ProjectNav navItems={navItems}/>
+        <GenerateSection heroSection={heroSection[0]} />
+        <ExploreSection />
         </>
     );
 
 }
 
+export function ExploreSection(){
+    return(
+        <div className='exploreSection'>
+           <h1 className="exploreHeading">Explore</h1>
+           <Tabs /> 
+           <ExploreGallery />
+        </div>
+    );
+}
+
+export function ExploreGallery(){
+    return(
+        <div className='exploreGalleryContainer'>
+            <div className='exploreGalleryRow'>
+                <div className='genCard'>
+                    <div className='genThumbnail'>
+                        <img className='genThumbnail' src="#" alt='generated thumbnail image'/>
+                        <div className='socials'></div>
+                        
+                    </div>
+                    <div className='genContent'>
+                        <div className='author'></div>
+                        <div className='promptContent'>
+                            <div className='Prompt'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='exploreGalleryRow'>
+
+            </div>
+            
+        </div>
+    );
+}
+
+
 export function GenerateSection({ heroSection }){
     
     return(
-        <div className='pt-24'>
+        <div className='generateSection'>
             <GenerateHero heroSection={heroSection} />
         </div>
     );
