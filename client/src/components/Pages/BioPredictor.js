@@ -36,6 +36,7 @@ export default function BioPredictor(){
                     <textarea
                     className='border rounded-md p-2  h-32 w-full'
                     value='MALKSLVLLSLLVLVLLLVRVQPSLGKETAAAKFERQHMDSSTSAASSSNYCNQMMKSRNLTKDRCKPVNTFVHESLADVQAVCSQKNVACKNGQTNCYQSYSTMSITDCRETGSSKYPNCAYKTTQANKHIIVACEGNPYVPVHFDASV'/>
+                    <button className='bg-blue-500 hover:bg-blue-600 text-white p-2 font-semibold rounded-md m-2'>Predict</button>
                 </form>
             </div>
             <div className='p-2 border rounded bg-slate-100 m-4'>

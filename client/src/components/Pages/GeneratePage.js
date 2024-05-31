@@ -92,7 +92,7 @@ export function ExploreSection(){
         <div className='exploreSection'>
            <h1 className="exploreHeading">Explore</h1>
            <Tabs /> 
-           <ExploreGallery />
+           {/*<ExploreGallery />*/}
         </div>
     );
 }
