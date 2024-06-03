@@ -26,6 +26,7 @@ import RefFocus from '../RefFocus';
 import EffectPlayer from '../EffectPlayer';
 import ContextPage from '../NoteContext/ContextPage';
 import VideoPlayer from '../VideoPlayer';
+import Stopwatch from '../Stopwatch';
 import NewRefCounter from '../NewRefCounter';
 
 import '../../App.css';
@@ -202,6 +203,9 @@ export default function MainApp() {
       </div>
       <div className='container p-3'>
        <NewRefCounter />
+      </div>
+      <div className='container p-3'>
+       <Stopwatch />
       </div>
 
 
