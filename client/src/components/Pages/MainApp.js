@@ -29,6 +29,7 @@ import VideoPlayer from '../VideoPlayer';
 import Stopwatch from '../Stopwatch';
 import UpdateAfterSend from '../UpdateAfterSend';
 import NewRefCounter from '../NewRefCounter';
+import FocusInput from '../FocusInput';
 
 import '../../App.css';
 
@@ -211,7 +212,9 @@ export default function MainApp() {
       <div className='container p-3'>
         <UpdateAfterSend />
       </div>
-
+    <div className='container p-3'>
+      <FocusInput />
+    </div>  
 
 
     </section>

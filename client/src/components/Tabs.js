@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const tabs = [
+const initialTabs = [
     {
         id: 0,
         name:"Featured",
@@ -24,25 +24,41 @@ const tabs = [
         name:"Your Work",
         link:"link",
         isSelected: false,
-    }
+    },
 ];
 export default function Tabs(){
-    const [selectedTab, setSelectedTab] = useState(tabs[0]);
+    const [tabs, setTabs] = useState(initialTabs);
+    const [selectedTab, setSelectedTab] = useState(0);
+
+    function handleClick(e){
+        setSelectedTab(e.target.key);
+        const newTabs = tabs.map(tab => {
+            if(tab.id === selectedTab) {
+                return {
+                    ...tab,
+                    isSelected: true
+                };
+            }
+            else{
+                return {
+                    ...tab,
+                    isSelected: false
+                };
+            }
+        });
+        setTabs(newTabs);
+    }
+    {/* doesnt work :( */}
     return(
         <div className='sliderContainer'>
             <div className='tabSlider'>
-                <div className='tabLinkSelected'>
-                    <button>Featured</button>
-                </div>
-                <div className='tabLinkUnselected'>
-                    <button>Recent</button>
-                </div>
-                <div className='tabLinkUnselected'>
-                    <button>Trending</button>
-                </div>
-                <div className='tabLinkUnselected'>
-                    <button>Your Work</button>
-                </div>
+                {tabs.map(tab => (
+                    <div key={tab.id} className={(selectedTab === tab.id) ? 'tabLinkSelected' : 'tabLinkUnselected'}>
+                        <button key={tab.id} onClick={handleClick}>{tab.name}</button>
+                    </div>
+                    
+                ))}
+
             </div>
         </div>
     );
