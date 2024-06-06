@@ -30,6 +30,7 @@ import Stopwatch from '../Stopwatch';
 import UpdateAfterSend from '../UpdateAfterSend';
 import NewRefCounter from '../NewRefCounter';
 import FocusInput from '../FocusInput';
+import Carousel from '../Carousel';
 
 import '../../App.css';
 
@@ -215,7 +216,9 @@ export default function MainApp() {
     <div className='container p-3'>
       <FocusInput />
     </div>  
-
+    <div className='container p-3'>
+      <Carousel />
+    </div>  
 
     </section>
     </>
