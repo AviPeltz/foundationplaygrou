@@ -31,6 +31,7 @@ import UpdateAfterSend from '../UpdateAfterSend';
 import NewRefCounter from '../NewRefCounter';
 import FocusInput from '../FocusInput';
 import Carousel from '../Carousel';
+import StaticSiteWrapper from '../StaticWrapper';
 
 import '../../App.css';
 
@@ -219,6 +220,9 @@ export default function MainApp() {
     <div className='container p-3'>
       <Carousel />
     </div>  
+    <div className='container p-3'>
+      <StaticSiteWrapper src="https://edit.bioglyph.app/"/>
+    </div>
 
     </section>
     </>

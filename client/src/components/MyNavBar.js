@@ -11,6 +11,7 @@ export default function MyNavBar(){
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/project">TensorMaker</Link>
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/generate">Generate</Link>
                 <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/bioglyph">BioGlyph</Link>
+                <Link className="font-medium bg-white text-gray-700 hover:text-blue-600 border m-1 p-1 rounded"to="/seeds">Seeds</Link>
             </div>
         </section>
     );

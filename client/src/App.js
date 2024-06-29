@@ -6,6 +6,7 @@ import CanvasApp from './components/Pages/CanvasApp';
 import ProjectsPage from './components/Pages/ProjectsPage';
 import GeneratePage from './components/Pages/GeneratePage';
 import BioPredictor from './components/Pages/BioPredictor';
+import SeedsPage from './components/Pages/SeedsPage';
 import React from 'react';
 import './style.css'
 
@@ -22,6 +23,7 @@ export default function App(){
           <Route path="/project" element={<ProjectsPage />} />
           <Route path="/generate" element={<GeneratePage />} />
           <Route path="/bioglyph" element={<BioPredictor />} />
+          <Route path="/seeds" element={<SeedsPage />}/>
           <Route path="/project/new_project"/>
         </Routes>
       </BrowserRouter>
